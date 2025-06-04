@@ -41,14 +41,6 @@
 		{{- $.Scratch.Set "isDisqus" true -}}
 		{{- end -}}
 
-		<!-- Check if disqus short name is given -->
-		{{ if not .Site.DisqusShortname }}
-		{{- $.Scratch.Set "isDisqus" false -}}
-		{{ end }}
-
-		{{- if eq ($.Scratch.Get "isDisqus") true -}}
-		{{- partial "disqus.html" . -}}
-		{{- end -}}
 	</div>
 	{{ partial "footer.html" . }}
 </body>
